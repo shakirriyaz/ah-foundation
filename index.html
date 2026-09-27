@@ -142,31 +142,34 @@
               </linearGradient>
             </defs>
             <circle cx="230" cy="230" r="210" fill="url(#skyGrad)"/>
-            <circle cx="230" cy="150" r="62" fill="url(#sunGrad)" opacity="0.9"/>
-            <g stroke="#E8CD8A" stroke-width="2" opacity="0.5">
-              <line x1="230" y1="60" x2="230" y2="80"/>
-              <line x1="140" y1="150" x2="160" y2="150"/>
-              <line x1="300" y1="150" x2="320" y2="150"/>
-              <line x1="165" y1="85" x2="178" y2="98"/>
-              <line x1="295" y1="85" x2="282" y2="98"/>
+            <circle class="hero-sun" cx="230" cy="150" r="62" fill="url(#sunGrad)" opacity="0.9"/>
+            <g class="sun-rays" stroke="#E8CD8A" stroke-width="2" opacity="0.5">
+              <line x1="230" y1="58" x2="230" y2="80"/>
+              <line x1="230" y1="220" x2="230" y2="242"/>
+              <line x1="138" y1="150" x2="160" y2="150"/>
+              <line x1="300" y1="150" x2="322" y2="150"/>
+              <line x1="163" y1="83" x2="178" y2="98"/>
+              <line x1="297" y1="83" x2="282" y2="98"/>
+              <line x1="163" y1="217" x2="178" y2="202"/>
+              <line x1="297" y1="217" x2="282" y2="202"/>
             </g>
             <path d="M0,300 Q115,255 230,290 T460,285 V460 H0 Z" fill="#16442f"/>
             <path d="M0,340 Q115,300 230,330 T460,320 V460 H0 Z" fill="#123526"/>
             <path d="M0,385 Q115,350 230,375 T460,365 V460 H0 Z" fill="#0c2018"/>
             <g transform="translate(230,300)">
-              <path d="M0,120 V10" stroke="#D9B45A" stroke-width="5" stroke-linecap="round"/>
-              <path d="M0,55 C-46,45 -60,0 -46,-38 C-8,-30 8,10 0,55Z" fill="#2c7f4b"/>
-              <path d="M0,25 C40,10 56,-32 44,-66 C10,-56 -8,-14 0,25Z" fill="#22693f"/>
-              <path d="M0,-2 C-26,-16 -30,-46 -18,-68 C6,-58 16,-28 0,-2Z" fill="#c99a2e"/>
+              <path class="hero-stem" d="M0,120 V10" stroke="#D9B45A" stroke-width="5" stroke-linecap="round"/>
+              <path class="hero-leaf" style="animation-delay:-1.2s" d="M0,55 C-46,45 -60,0 -46,-38 C-8,-30 8,10 0,55Z" fill="#2c7f4b"/>
+              <path class="hero-leaf" style="animation-delay:-3s" d="M0,25 C40,10 56,-32 44,-66 C10,-56 -8,-14 0,25Z" fill="#22693f"/>
+              <path class="hero-leaf" style="animation-delay:-0.4s" d="M0,-2 C-26,-16 -30,-46 -18,-68 C6,-58 16,-28 0,-2Z" fill="#c99a2e"/>
               <ellipse cx="0" cy="128" rx="66" ry="12" fill="#000" opacity="0.18"/>
             </g>
             <g fill="#E8CD8A">
-              <circle cx="90" cy="110" r="2.4"/>
-              <circle cx="360" cy="95" r="2"/>
-              <circle cx="110" cy="180" r="1.8"/>
-              <circle cx="340" cy="200" r="2.4"/>
-              <circle cx="60" cy="230" r="2"/>
-              <circle cx="400" cy="250" r="1.8"/>
+              <circle class="hero-mote" style="animation-delay:0s" cx="90" cy="110" r="2.4"/>
+              <circle class="hero-mote" style="animation-delay:-0.6s" cx="360" cy="95" r="2"/>
+              <circle class="hero-mote" style="animation-delay:-1.4s" cx="110" cy="180" r="1.8"/>
+              <circle class="hero-mote" style="animation-delay:-2.1s" cx="340" cy="200" r="2.4"/>
+              <circle class="hero-mote" style="animation-delay:-0.9s" cx="60" cy="230" r="2"/>
+              <circle class="hero-mote" style="animation-delay:-2.6s" cx="400" cy="250" r="1.8"/>
             </g>
           </svg>
           <div class="hero-badge">
@@ -177,6 +180,16 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="hero-particles" aria-hidden="true">
+      <span class="hero-particle" style="left:8%; animation-duration:9s; animation-delay:-1s;"></span>
+      <span class="hero-particle" style="left:22%; width:3px; height:3px; animation-duration:12s; animation-delay:-4s;"></span>
+      <span class="hero-particle" style="left:38%; animation-duration:10s; animation-delay:-7s;"></span>
+      <span class="hero-particle" style="left:55%; width:4px; height:4px; animation-duration:14s; animation-delay:-2s;"></span>
+      <span class="hero-particle" style="left:68%; animation-duration:11s; animation-delay:-9s;"></span>
+      <span class="hero-particle" style="left:82%; width:3px; height:3px; animation-duration:13s; animation-delay:-5s;"></span>
+      <span class="hero-particle" style="left:92%; animation-duration:9.5s; animation-delay:-3s;"></span>
     </div>
 
     <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>

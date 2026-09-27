@@ -256,8 +256,54 @@ body.nav-open { overflow: hidden; }
   mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), transparent 85%);
 }
 .hero-blob { position: absolute; z-index: 0; opacity: 0.5; filter: blur(0.5px); }
-.hero-blob.b1 { top: -140px; right: -160px; width: 620px; }
-.hero-blob.b2 { bottom: -200px; left: -180px; width: 520px; opacity: 0.35; }
+.hero-blob.b1 { top: -140px; right: -160px; width: 620px; animation: blob-drift-1 16s ease-in-out infinite; }
+.hero-blob.b2 { bottom: -200px; left: -180px; width: 520px; opacity: 0.35; animation: blob-drift-2 20s ease-in-out infinite; }
+@keyframes blob-drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(-22px, 26px) scale(1.06) rotate(6deg); }
+}
+@keyframes blob-drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(20px, -18px) scale(1.05) rotate(-5deg); }
+}
+
+/* Hero art: sun glow, rotating rays, twinkling motes, swaying leaves */
+.hero-sun { transform-box: fill-box; transform-origin: center; animation: sun-pulse 4.5s ease-in-out infinite; }
+@keyframes sun-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+.sun-rays { transform-box: fill-box; transform-origin: center; animation: rays-rotate 50s linear infinite; }
+@keyframes rays-rotate { to { transform: rotate(360deg); } }
+.hero-mote { transform-box: fill-box; transform-origin: center; animation: mote-twinkle 3.2s ease-in-out infinite; }
+@keyframes mote-twinkle {
+  0%, 100% { opacity: 0.35; transform: scale(0.75); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+.hero-leaf { transform-box: fill-box; transform-origin: 50% 100%; animation: leaf-sway 5.5s ease-in-out infinite; }
+@keyframes leaf-sway {
+  0%, 100% { transform: rotate(-2.5deg); }
+  50% { transform: rotate(2.5deg); }
+}
+.hero-stem { transform-box: fill-box; transform-origin: 50% 100%; animation: leaf-sway 5.5s ease-in-out infinite; }
+
+/* Rising pollen particles drifting up through the hero */
+.hero-particles { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+.hero-particle {
+  position: absolute;
+  bottom: -10px;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--gold-300);
+  opacity: 0;
+  animation: particle-rise linear infinite;
+}
+@keyframes particle-rise {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.5; }
+  100% { transform: translateY(-620px) translateX(30px); opacity: 0; }
+}
 .hero .container { position: relative; z-index: 2; }
 .hero-grid { display: grid; gap: 56px; align-items: center; }
 @media (min-width: 980px) { .hero-grid { grid-template-columns: 1.05fr 0.95fr; gap: 40px; } }
