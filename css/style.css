@@ -409,14 +409,38 @@ body.nav-open { overflow: hidden; }
 /* ---------- Pillars / value cards ---------- */
 .pillars-grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
 .pillar-card {
+  position: relative;
   background: var(--white);
   border-radius: var(--radius-md);
-  padding: 34px 28px;
+  padding: 36px 28px 30px;
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(22,68,47,0.06);
+  border-top: 3px solid transparent;
+  background-image: linear-gradient(var(--white), var(--white)), linear-gradient(90deg, var(--gold-400), var(--gold-600));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
   transition: transform var(--dur-md) var(--ease-out), box-shadow var(--dur-md) var(--ease-out);
 }
 .pillar-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.pillar-index {
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 1;
+  color: var(--gold-500);
+}
+.pillar-index::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: var(--forest-800);
+  margin-top: 16px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
 .icon-circle {
   width: 54px; height: 54px; border-radius: var(--radius-pill);
   background: var(--cream-300);
@@ -551,15 +575,17 @@ body.nav-open { overflow: hidden; }
 .process-copy ul li svg { width: 16px; height: 16px; color: var(--forest-600); flex-shrink: 0; margin-top: 3px; }
 
 /* Criteria checklist */
-.check-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.check-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .check-item {
   display: flex; gap: 14px; align-items: flex-start;
-  background: var(--white); padding: 20px; border-radius: var(--radius-md);
-  border: 1px solid rgba(22,68,47,0.06); box-shadow: var(--shadow-sm);
+  background: var(--white); padding: 20px 22px; border-radius: var(--radius-sm);
+  border: 1px solid rgba(22,68,47,0.06); border-left: 3px solid var(--gold-500);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur-sm) var(--ease-out), box-shadow var(--dur-sm) var(--ease-out);
 }
-.check-item .icon-circle { width: 38px; height: 38px; margin-bottom: 0; flex-shrink: 0; background: var(--forest-800); color: var(--gold-300); }
-.check-item .icon-circle svg { width: 18px; height: 18px; }
-.check-item p { font-size: 14.5px; color: var(--ink-700); line-height: 1.55; padding-top: 6px; }
+.check-item:hover { transform: translateX(3px); box-shadow: var(--shadow-md); }
+.check-mark { width: 18px; height: 18px; margin-top: 4px; flex-shrink: 0; color: var(--forest-700); }
+.check-item p { font-size: 14.5px; color: var(--ink-700); line-height: 1.55; }
 
 /* ---------- Notice ---------- */
 .notice {
