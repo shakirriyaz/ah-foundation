@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 
 <script type="application/ld+json">
 {
@@ -210,26 +210,28 @@
           </div>
         </div>
         <div class="split-media">
-          <svg viewBox="0 0 500 420" role="img" aria-label="Illustration of a growing plant surrounded by community and stewardship icons">
-            <rect width="500" height="420" rx="28" fill="#f5efe0"/>
-            <circle cx="250" cy="210" r="150" fill="#ece2c9"/>
-            <g transform="translate(250,260)">
-              <path d="M0,120 V0" stroke="#22693f" stroke-width="6" stroke-linecap="round"/>
-              <path d="M0,60 C-56,48 -72,-6 -56,-50 C-10,-38 10,16 0,60Z" fill="#2c7f4b"/>
-              <path d="M0,26 C50,10 68,-40 54,-78 C12,-66 -10,-18 0,26Z" fill="#1c5638"/>
-              <path d="M0,-4 C-30,-20 -34,-54 -20,-80 C8,-68 18,-32 0,-4Z" fill="#c99a2e"/>
-            </g>
-            <g fill="none" stroke="#a9791f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="120" cy="120" r="26" fill="#fbf8f1" stroke="none"/>
-              <path transform="translate(107,107)" d="M9 15l6-6"/>
-              <path transform="translate(107,107)" d="M8 17l-2.5 2.5a3.5 3.5 0 01-5-5L3 12"/>
-              <circle cx="382" cy="140" r="26" fill="#fbf8f1" stroke="none"/>
-              <path transform="translate(369,127)" d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.5-9.5 9-9.5 9z"/>
-              <circle cx="370" cy="300" r="26" fill="#fbf8f1" stroke="none"/>
-              <path transform="translate(357,287)" d="M3 17l6-6 4 4 8-8"/>
-              <path transform="translate(357,287)" d="M15 7h6v6"/>
-            </g>
-          </svg>
+          <div class="photo-slideshow" data-slideshow>
+            <div class="slideshow-track">
+              <figure class="slide is-active">
+                <img src="assets/img/jamaica-mission-3.jpg" width="1024" height="768" alt="Children and families gather together during the AH Foundation's Jamaica mission outreach" loading="eager">
+              </figure>
+              <figure class="slide">
+                <img src="assets/img/jamaica-mission-1.jpg" width="768" height="1024" alt="A boy raises his hand in worship during Vacation Bible School on the AH Foundation's Jamaica mission trip" loading="lazy">
+              </figure>
+              <figure class="slide">
+                <img src="assets/img/jamaica-mission-2.jpg" width="768" height="1024" alt="Two young girls from the Savanna-la-Mar community smile during the AH Foundation's mission outreach" loading="lazy">
+              </figure>
+              <figure class="slide">
+                <img src="assets/img/jamaica-mission-4.jpg" width="768" height="1024" alt="A community elder pauses for a portrait during the AH Foundation's Jamaica mission outreach" loading="lazy">
+              </figure>
+            </div>
+            <div class="slideshow-dots" role="tablist" aria-label="Mission trip photos">
+              <button class="dot is-active" type="button" data-index="0" aria-label="Show photo 1 of 4"></button>
+              <button class="dot" type="button" data-index="1" aria-label="Show photo 2 of 4"></button>
+              <button class="dot" type="button" data-index="2" aria-label="Show photo 3 of 4"></button>
+              <button class="dot" type="button" data-index="3" aria-label="Show photo 4 of 4"></button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -487,6 +489,6 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
 </button>
 
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=4"></script>
 </body>
 </html>

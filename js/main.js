@@ -126,6 +126,42 @@
     }
   }
 
+  /* Photo slideshow */
+  document.querySelectorAll("[data-slideshow]").forEach(function (root) {
+    var slides = root.querySelectorAll(".slide");
+    var dots = root.querySelectorAll(".dot");
+    if (!slides.length) return;
+    var current = 0;
+    var timer = null;
+
+    function show(index) {
+      slides[current].classList.remove("is-active");
+      if (dots[current]) dots[current].classList.remove("is-active");
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add("is-active");
+      if (dots[current]) dots[current].classList.add("is-active");
+    }
+    function next() { show(current + 1); }
+    function start() {
+      stop();
+      timer = setInterval(next, 5000);
+    }
+    function stop() {
+      if (timer) clearInterval(timer);
+    }
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () {
+        show(i);
+        start();
+      });
+    });
+    root.addEventListener("mouseenter", stop);
+    root.addEventListener("mouseleave", start);
+
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) start();
+  });
+
   /* Partner filter (Our Partners page) */
   var chips = document.querySelectorAll(".filter-chip");
   var cards = document.querySelectorAll("[data-category]");

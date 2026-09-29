@@ -465,6 +465,64 @@ body.nav-open { overflow: hidden; }
 .split-copy p { color: var(--ink-500); font-size: 16.5px; line-height: 1.8; margin-top: 16px; }
 .split-copy p:first-of-type { margin-top: 22px; }
 
+/* ---------- Photo slideshow ---------- */
+.photo-slideshow {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 500 / 420;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background: var(--forest-950);
+}
+.photo-slideshow::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 96px;
+  background: linear-gradient(to top, rgba(12, 32, 24, 0.6), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+.slideshow-track { position: relative; width: 100%; height: 100%; }
+.slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 1.1s var(--ease-out);
+}
+.slide.is-active { opacity: 1; }
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  display: block;
+}
+.slideshow-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  z-index: 2;
+}
+.slideshow-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background var(--dur-sm), transform var(--dur-sm);
+}
+.slideshow-dots .dot.is-active { background: var(--gold-400); transform: scale(1.3); }
+.slideshow-dots .dot:hover { background: rgba(255, 255, 255, 0.75); }
+
 /* ---------- Stories / impact cards ---------- */
 .story-grid { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .story-card {

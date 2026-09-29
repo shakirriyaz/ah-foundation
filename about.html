@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 
 <script type="application/ld+json">
 {
@@ -112,22 +112,24 @@
           <p>Rather than simply giving, the Foundation seeks to build meaningful relationships with organizations that understand their communities and are already doing important work.</p>
         </div>
         <div class="split-media">
-          <svg viewBox="0 0 500 420" role="img" aria-label="Illustration representing service and stewardship">
-            <rect width="500" height="420" rx="28" fill="#123526"/>
-            <circle cx="250" cy="180" r="150" fill="#1c5638"/>
-            <g transform="translate(250,235)">
-              <rect x="-70" y="-10" width="140" height="90" rx="10" fill="#0c2018"/>
-              <rect x="-70" y="-10" width="140" height="20" rx="10" fill="#22693f"/>
-              <path d="M-40,-10 v-30 a40,40 0 0180,0 v30" fill="none" stroke="#d9b45a" stroke-width="6"/>
-              <circle cx="0" cy="30" r="10" fill="#c99a2e"/>
-            </g>
-            <g fill="#e8cd8a">
-              <circle cx="120" cy="110" r="2.4"/>
-              <circle cx="370" cy="90" r="2"/>
-              <circle cx="380" cy="260" r="2.2"/>
-              <circle cx="100" cy="280" r="2"/>
-            </g>
-          </svg>
+          <div class="photo-slideshow" data-slideshow>
+            <div class="slideshow-track">
+              <figure class="slide is-active">
+                <img src="assets/img/jamaica-mission-3.jpg" width="1024" height="768" alt="Children and families gather together during the AH Foundation's Jamaica mission outreach" loading="eager">
+              </figure>
+              <figure class="slide">
+                <img src="assets/img/jamaica-mission-2.jpg" width="768" height="1024" alt="Two young girls from the Savanna-la-Mar community smile during the AH Foundation's mission outreach" loading="lazy">
+              </figure>
+              <figure class="slide">
+                <img src="assets/img/jamaica-mission-1.jpg" width="768" height="1024" alt="A boy raises his hand in worship during Vacation Bible School on the AH Foundation's Jamaica mission trip" loading="lazy">
+              </figure>
+            </div>
+            <div class="slideshow-dots" role="tablist" aria-label="Mission trip photos">
+              <button class="dot is-active" type="button" data-index="0" aria-label="Show photo 1 of 3"></button>
+              <button class="dot" type="button" data-index="1" aria-label="Show photo 2 of 3"></button>
+              <button class="dot" type="button" data-index="2" aria-label="Show photo 3 of 3"></button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -310,6 +312,6 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
 </button>
 
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=4"></script>
 </body>
 </html>
